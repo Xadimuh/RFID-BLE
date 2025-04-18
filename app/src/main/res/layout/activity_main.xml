@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- TextView pour afficher les messages Bluetooth -->
+    <TextView
+        android:id="@+id/textViewMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="16dp"
+        android:text="Messages Bluetooth"
+        android:textSize="16sp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toTopOf="@id/btnOpen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Effacer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp" />
+    <!-- Bouton pour ouvrir la porte -->
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ouvrir la Porte"
+        android:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessages"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Bouton pour fermer la porte -->
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fermer la Porte"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
